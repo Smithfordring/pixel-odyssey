@@ -1,0 +1,22 @@
+# dependencies and builds
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+backend/target/
+
+# secrets and machine-local config
+.env
+.env.*
+!.env.example
+**/application-local.yml
+**/application-local.yaml
+**/application-local.properties
+*.pem
+*.key
+
+# logs and editor files
+*.log
+logs/
+.idea/
+*.iml
+.DS_Store

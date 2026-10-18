@@ -1,0 +1,24 @@
+-- Pixel Odyssey database initialization notes
+--
+-- This file explains how to create the local database. It does not define game tables.
+-- Characters, inventory, equipment, and save data will be added when persistence work starts.
+--
+-- Engine: MySQL 8
+-- Character set: utf8mb4
+-- Collation: utf8mb4_unicode_ci
+--
+-- Do not put passwords or other secrets in this file. Keep credentials in a gitignored
+-- local Spring config, such as backend/src/main/resources/application-local.yml.
+--
+-- The API does not connect to MySQL in this stage, so GET /api/health can start
+-- without a database.
+--
+-- Suggested local setup, run in the MySQL client with your own password:
+--
+--   CREATE DATABASE IF NOT EXISTS pixel_odyssey
+--     DEFAULT CHARACTER SET utf8mb4
+--     DEFAULT COLLATE utf8mb4_unicode_ci;
+--
+--   CREATE USER IF NOT EXISTS 'pixel_odyssey'@'localhost' IDENTIFIED BY '<local-password>';
+--   GRANT ALL PRIVILEGES ON pixel_odyssey.* TO 'pixel_odyssey'@'localhost';
+--   FLUSH PRIVILEGES;
